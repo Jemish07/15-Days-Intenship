@@ -1,0 +1,36 @@
+package com.jasmin.akashcustomlistview;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+public class MainActivity extends AppCompatActivity {
+    ListView listView;
+    int[] image = {R.drawable.blackpanther,R.drawable.captian,R.drawable.grot,R.drawable.ironman,R.drawable.thor,R.drawable.shild};
+    String[] name={"It's black panther","It's captain","It's groot","It's iron man","It's thor","It's shield"};
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        listView=findViewById(R.id.lv1);
+        Myadapter myAdapter = new Myadapter(image,name,MainActivity.this);
+        listView.setAdapter(myAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                intent.putExtra("I1",image[position]);
+                intent.putExtra("T1",name[position]);
+                startActivity(intent);
+            }
+        });
+
+    }
+}
