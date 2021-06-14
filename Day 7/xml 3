@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="118dp"
+        android:text="Your E-Mail:"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/peml"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="118dp"
+        android:text="Your Password :"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/ppas"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/style2"
+        android:layout_marginStart="100dp"
+        android:hint="LOG-OUT"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"/>
+</LinearLayout>
