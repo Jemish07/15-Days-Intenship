@@ -1,0 +1,44 @@
+package com.jasmin.akashmusicplayer;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button b1,b2,b3;
+    MediaPlayer mediaPlayer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        b1 = findViewById(R.id.stbtn);
+        b2 = findViewById(R.id.pusbtn);
+        b3 = findViewById(R.id.stopbtn);
+        mediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.tune);
+        b1.setOnClickListener(this);
+        b2.setOnClickListener(this);
+        b3.setOnClickListener(this);
+
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.stbtn:
+            mediaPlayer.start();
+            break;
+            case R.id.pusbtn:
+                mediaPlayer.pause();
+            break;
+            case R.id.stopbtn:
+                mediaPlayer.stop();
+            break;
+
+        }
+    }
+}
