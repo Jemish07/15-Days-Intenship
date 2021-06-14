@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/profilepic"/>
+
+    <EditText
+        android:id="@+id/email"
+      android:layout_width="match_parent"
+      android:hint="  E-Mail"
+        android:drawablePadding="5dp"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      android:layout_height="50dp"
+        android:inputType="textShortMessage"
+      android:layout_marginTop="50dp"
+      android:background="@drawable/style"
+      android:layout_marginRight="20dp"
+      android:layout_marginLeft="20dp"
+      android:drawableLeft="@drawable/email"
+      android:paddingLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/password"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:hint="  Password"
+        android:drawablePadding="5dp"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:layout_marginTop="30dp"
+       android:background="@drawable/style"
+       android:layout_marginRight="20dp"
+       android:layout_marginLeft="20dp"
+        android:inputType="textShortMessage"
+       android:drawableLeft="@drawable/key"
+       android:paddingLeft="10dp"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="180dp"
+        android:background="@drawable/style2"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="-20dp"
+        android:text="  Log-In"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/sign"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/style2"
+        android:layout_marginEnd="-20dp"
+        android:text="  Sign-Up"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+
